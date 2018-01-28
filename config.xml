@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.example.todomvc" version="1.1.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <hook type="before_prepare" src="hooks/build.sh" />
-    <name>TodoMvc</name>
+    <name>Rocket Game</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>

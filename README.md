@@ -1,30 +1,5 @@
-[![Build Status](https://travis-ci.org/unimonkiez/react-cordova-boilerplate.svg)](https://travis-ci.org/unimonkiez/react-cordova-boilerplate)
-[![Dependency Status](https://david-dm.org/unimonkiez/react-cordova-boilerplate.svg)](https://david-dm.org/unimonkiez/react-cordova-boilerplate)
-[![devDependency Status](https://david-dm.org/unimonkiez/react-cordova-boilerplate/dev-status.svg)](https://david-dm.org/unimonkiez/react-cordova-boilerplate#info=devDependencies)
-[![npm version](https://badge.fury.io/js/react-cordova-boilerplate.svg)](http://badge.fury.io/js/react-cordova-boilerplate)
-# React Cordova boilerplate
-## Demo - click the image to try it
-[<img src="https://raw.githubusercontent.com/unimonkiez/react-cordova-boilerplate/gh-pages/resources/demo.jpg" width="300" />](http://unimonkiez.github.io/react-cordova-boilerplate/)
-
-<img src="https://raw.githubusercontent.com/unimonkiez/react-cordova-boilerplate/gh-pages/resources/demo.gif" width="300" />
-
-## Why cordova  and React
+## Rocket Game In React & Cordova
 Cordova is really simple to build cross platform mobile applications for any of your needs, this boilerplate provides a great starting point for your next react project, and can be used to maintain a website and mobile application from same source code (and maybe transitioning later to react-native)
-
-## Features
-* eslint
-* Smart build using Webpack 2
-  * ES6
-  * React (jsx)
-  * Server rendering for initial page
-  * Style: Radium + SASS
-* React router
-* Testing
-  * Mocha
-  * jsdom (blazing fast testing on nodeJs)
-  * Sinon
-  * Chai
-  * Coverage using nyc
 
 ## Installing
 1. Install dependencies: ```npm i``` or ```yarn install```
