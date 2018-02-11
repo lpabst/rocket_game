@@ -1,4 +1,4 @@
-## Rocket Game In React & Cordova
+## React Cordove Seed
 Cordova is really simple to build cross platform mobile applications for any of your needs, this boilerplate provides a great starting point for your next react project, and can be used to maintain a website and mobile application from same source code (and maybe transitioning later to react-native)
 
 ## Installing
