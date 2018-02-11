@@ -22,7 +22,21 @@
 .thrust{
     width: 120px;
     height: 40px;
-    margin: 0 auto;
+    margin: 5px auto;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 3px #000;
+    background: #3f3e3c;
+    color: #fff;
+    cursor: pointer;
+}
+
+.start{
+    width: 120px;
+    height: 40px;
+    margin: 5px auto;
     font-size: 18px;
     text-align: center;
     line-height: 40px;

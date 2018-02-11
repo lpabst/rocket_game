@@ -16,17 +16,20 @@ export default class TodoAppComponent extends Component {
       thrustIncrementer: 0.01,
       points: 0,
       pointsIncrementer: 1,
+      gameOver: false,
     }
 
+    this.startGame = this.startGame.bind(this);
     this.gameLoop = this.gameLoop.bind(this);
     this.addThrust = this.addThrust.bind(this);
+    this.newGame = this.newGame.bind(this);
   }
 
   componentDidMount(){
-    this.canvas3();
+    this.startGame();
   }
 
-  canvas3(){
+  startGame(){
 
     let board = document.getElementById('board');
     let b = board.getContext('2d');
@@ -36,12 +39,12 @@ export default class TodoAppComponent extends Component {
     b.fillStyle = 'rgba(0,0,0,1)';
     b.fillRect(0, 0, w, h);
 
-    setInterval(this.gameLoop, 30);
+    window.game = setInterval(this.gameLoop, 30);
 
   }
 
   gameLoop(){
-
+    
     let board = document.getElementById('board');
     let b = board.getContext('2d');
     let w = board.width;
@@ -77,27 +80,40 @@ export default class TodoAppComponent extends Component {
     this.args.thrustIncrease += this.args.thrustIncrementer;
 
     // handle crashes
-    if (posY < 0){
-      this.args.thrust = 0;
-      this.args.gravity = 0;
-      this.args.posY = 0;
-      this.args.pointsIncrementer = 0;
-      this.args.gravityIncrementer = 0;
-      this.args.thrustIncrementer = 0;
-    }
-    if (posY > h){
-      this.args.thrust = 0;
-      this.args.gravity = 0;
-      this.args.posY = h;
-      this.args.pointsIncrementer = 0;
-      this.args.gravityIncrementer = 0;
-      this.args.thrustIncrementer = 0;
+    if (posY < 0 || posY > h){
+      this.gameOver();
     }
 
   }
 
   addThrust(){
     this.args.thrust -= this.args.thrustIncrease;
+  }
+
+  gameOver(){
+    this.args.gameOver = true;
+    window.clearInterval(window.game);
+  }
+
+  newGame(){
+    if (this.args.gameOver){
+      
+      this.args = {
+        username: '',
+        gravity: 4,
+        gravityIncrementer: 0.02,
+        posY: 100,
+        velY: 0,
+        thrust: -4.5,
+        thrustIncrease: 2,
+        thrustIncrementer: 0.01,
+        points: 0,
+        pointsIncrementer: 1,
+        gameOver: false,
+      }
+
+      this.startGame();
+    }
   }
 
   render() {
@@ -107,6 +123,7 @@ export default class TodoAppComponent extends Component {
         <div className='game_console'>
           <canvas className='canvas' id='board' width='300' height='400'>Fallback text for older browsers</canvas>
           <div className='thrust' onClick={this.addThrust}>Thrust</div>
+          <div className='start' onClick={this.newGame}>New Game</div>
         </div>
 
       </div>
