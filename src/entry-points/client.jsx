@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from 'src/containers/app.jsx';
-import AppRoute from 'src/containers/app-route.jsx';
+import App from 'src/app.jsx';
+import Router from 'src/Router.jsx';
 
 ReactDOM.render(
   <App>
-    <AppRoute />
+    <Router />
   </App>,
   document.getElementById('app')
 );
